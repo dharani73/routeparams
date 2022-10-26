@@ -21,7 +21,8 @@ module('Integration | Component | store/detailed', function (hooks) {
         },
         category: 'Vegetables',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpRrke3Izx3RVURPmCwFKJGACwf2hXD-VIvg&usqp=CAU',
+          'https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg',
+
         description:
           'These are organic vegetables also fresh and easy to buy now from our app.',
       },
@@ -40,12 +41,11 @@ module('Integration | Component | store/detailed', function (hooks) {
     assert.dom('.jumbo a.button').containsText('Share on Twitter');
   });
 
-  test('it renders information about a groceries', async function (assert) {
+  test('it renders detailed information about a groceries', async function (assert) {
     await render(hbs`<Store::Detailed @store={{this.store}} />`);
 
     assert.dom('article').hasClass('store');
-    assert.dom('article h3').hasText('Fresh Vegetables');
-    assert.dom('article h3 a').hasAttribute('href', '/stores/1');
+    assert.dom('article h3').containsText('About Fresh Vegetables');
     assert.dom('article .homedelivery').includesText('Available');
     assert.dom('article .location').includesText('hyderabad');
     assert.dom('article .Rating').includesText('5 star');

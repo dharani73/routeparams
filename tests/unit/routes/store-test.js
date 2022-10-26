@@ -1,11 +1,11 @@
-import { module, test } from 'qunit';
-import { setupTest } from 'grocery-store/tests/helpers';
+// import { module, test } from 'qunit';
+// import { setupTest } from 'grocery-store/tests/helpers';
 
-module('Unit | Route | store', function (hooks) {
-  setupTest(hooks);
+// module('Unit | Route | store', function (hooks) {
+//   setupTest(hooks);
 
-  test('it exists', function (assert) {
-    let route = this.owner.lookup('route:store');
-    assert.ok(route);
-  });
-});
+//   test('it exists', function (assert) {
+//     let route = this.owner.lookup('route:store');
+//     assert.ok(route);
+//   });
+// });
