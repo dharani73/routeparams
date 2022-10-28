@@ -4,7 +4,7 @@ export default class StoreModel extends Model {
   @attr title;
   @attr homedelivery;
   @attr city;
-  @attr Rating;
+  @attr rating;
   @attr stock;
   @attr location;
   @attr category;

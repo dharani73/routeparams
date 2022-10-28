@@ -1,5 +1,5 @@
 // import { module, test } from 'qunit';
-// import { setupTest } from 'grocery-store/tests/helpers';
+// import { setupTest } from 'ember-qunit';
 
 // module('Unit | Route | store', function (hooks) {
 //   setupTest(hooks);

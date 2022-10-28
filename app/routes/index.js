@@ -1,23 +1,17 @@
 import Route from '@ember/routing/route';
-
-const GROCERY_CATEGORIES = ['Vegetables', 'Fruits', 'Cereals'];
+import { inject as service } from '@ember/service';
+// const GROCERY_CATEGORIES = ['Vegetables', 'Fruits', 'Cereals'];
 
 export default class IndexRoute extends Route {
+  @service store;
+
+  // if (GROCERY_CATEGORIES.includes(attributes.category)) {
+  //   type = 'Grocery';
+  // } else {
+  //   type = 'All';
+  // }
+
   async model() {
-    let response = await fetch('/api/stores.json');
-    let { data } = await response.json();
-
-    return data.map((model) => {
-      let { id, attributes } = model;
-      let type;
-
-      if (GROCERY_CATEGORIES.includes(attributes.category)) {
-        type = 'Grocery';
-      } else {
-        type = 'All';
-      }
-
-      return { id, type, ...attributes };
-    });
+    return this.store.findAll('store');
   }
 }

@@ -17,7 +17,7 @@ module('Integration | Component | store', function (hooks) {
         title: 'Fresh Vegetables',
         homedelivery: 'Available',
         city: 'hyderabad',
-        Rating: '5 star',
+        rating: '5 star',
         stock: 'Available',
         location: {
           lat: 37.7749,
